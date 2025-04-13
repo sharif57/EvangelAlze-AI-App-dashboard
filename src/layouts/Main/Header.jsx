@@ -11,6 +11,7 @@ const Header = () => {
   const loacatin = useLocation();
   const notificationRef = useRef(null);
   const [notificationPopup, setNotificationPopup] = useState(false);
+  console.log(notificationPopup)
 
   const handleChange = (value) => {
     console.log(`selected ${value}`);
