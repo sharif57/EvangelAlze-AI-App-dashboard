@@ -1,10 +1,17 @@
+
+// export default function HostsTable() {
+//   return (
+//     <div>HostsTable</div>
+//   )
+// }
+
 import { Table } from "antd";
 import exlamIcon from "../assets/images/exclamation-circle.png";
 import { useState } from "react";
 import DashboardModal from "./DashboardModal";
 import { Search } from "lucide-react";
 
-const DashboardHomeTable = () => {
+const HostsTable = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
 
@@ -69,7 +76,7 @@ const DashboardHomeTable = () => {
   return (
     <div className="rounded-lg border py-4 bg-white mt-8 recent-users-table">
       <div className="flex items-center justify-between p-2">
-        <h3 className="text-2xl text-black mb-4 pl-2">Recent Users</h3>
+        <h3 className="text-2xl text-black mb-4 pl-2">Hosts</h3>
         <div className="flex justify-center items-center gap-4">
           <input
             type="text"
@@ -77,7 +84,7 @@ const DashboardHomeTable = () => {
             className="border border-[#999999] bg-[#fdece9] px-4 rounded-lg py-2"
           />
           <Search className="bg-[#E73E1E] text-white p-2 size-10 rounded-full"/> 
-        </div>
+          </div>
       </div>
       {/* Ant Design Table */}
       <Table
@@ -131,4 +138,4 @@ const DashboardHomeTable = () => {
   );
 };
 
-export default DashboardHomeTable;
+export default HostsTable;

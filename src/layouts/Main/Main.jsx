@@ -14,6 +14,7 @@ const Main = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
   return (
     <div className="flex text-start bg-white min-h-screen">
       <div className="">

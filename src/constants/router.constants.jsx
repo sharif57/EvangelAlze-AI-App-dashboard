@@ -7,7 +7,6 @@ import TermsConditions from "../pages/Settings/TermsConditions";
 import EditTermsConditions from "../pages/Settings/EditTermsConditions";
 import PrivacyPolicy from "../pages/Settings/PrivacyPolicy";
 import EditPrivacyPolicy from "../pages/Settings/EditPrivacyPolicy";
-
 import { MdOutlineSecurityUpdateWarning } from "react-icons/md";
 import HostDetails from "../pages/Main/Host/HostDetails";
 import { FaServicestack } from "react-icons/fa6";
@@ -18,7 +17,7 @@ import ForgotPassword from "../pages/Main/Setting/Change-password/ForgotPassword
 import VerifyEmail from "../pages/Main/Setting/Change-password/VerifyEmail";
 import Trust from "../pages/Settings/Trust";
 import EditTrust from "../pages/Settings/EditTrust";
-import { TbCash } from "react-icons/tb";
+import { TbCash, TbUserQuestion } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 import { BadgePoundSterling, ShoppingBag } from "lucide-react";
 import Shop from "../pages/Main/Shop/Shop";
@@ -26,6 +25,7 @@ import AddItem from "../pages/Main/Shop/AddItem";
 import Parties from "../pages/Main/Parties/Parties";
 import TransactionHome from "../pages/Main/Transaction/TransactionHome";
 import Notifications from "../pages/Main/Notifications/Notifications";
+import HostRequest from "../pages/Main/HostRequest/HostRequest";
 
 export const dashboardItems = [
   {
@@ -33,6 +33,12 @@ export const dashboardItems = [
     path: "/",
     icon: RiDashboardHorizontalFill,
     element: <DashboardHome />,
+  },
+  {
+    name: "Host Request",
+    path: "/host-request",
+    icon: TbUserQuestion     ,
+    element: <HostRequest />,
   },
   {
     name: "Shop",
