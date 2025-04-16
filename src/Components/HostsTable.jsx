@@ -1,10 +1,3 @@
-
-// export default function HostsTable() {
-//   return (
-//     <div>HostsTable</div>
-//   )
-// }
-
 import { Table } from "antd";
 import exlamIcon from "../assets/images/exclamation-circle.png";
 import { useState } from "react";

@@ -89,7 +89,7 @@ const DashboardHome = () => {
         {/* Total Party Card */}
         <Link
           to={"/parties"}
-          className="flex items-center gap-4 p-6 rounded-lg bg-white shadow-sm"
+          className="flex items-center gap-4 p-6 rounded-xl bg-white shadow-sm"
         >
           <div className="bg-[#FAE9E6] p-4 rounded-2xl">
             <img src="/party.png" alt="Party icon" className="w-8 h-8" />

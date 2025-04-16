@@ -1,4 +1,5 @@
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function HostRequest() {
   const users = [
@@ -74,15 +75,30 @@ export default function HostRequest() {
         { name: "License.pdf", approved: true },
       ],
     },
-  ]
+  ];
+
+  const handleDelete = () => {
+    toast.success("delete successfully ");
+  };
+
+  const handleApproved = () => {
+    toast.success("Approved successfully ");
+  };
 
   return (
     <div className="   pt-4">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {users.map((user) => (
-          <div key={user.id} className="bg-white rounded-lg p-6 flex flex-col items-center">
+          <div
+            key={user.id}
+            className="bg-white rounded-lg p-6 flex flex-col items-center"
+          >
             <div className="w-20 h-20 rounded-full overflow-hidden mb-2">
-              <img src={user.avatar || "/placeholder.svg"} alt={user.name} className="w-full h-full object-cover" />
+              <img
+                src={user.avatar || "/placeholder.svg"}
+                alt={user.name}
+                className="w-full h-full object-cover"
+              />
             </div>
             <h3 className="text-lg font-medium text-gray-900">{user.name}</h3>
             <p className="text-sm  text-gray-500 mb-4 ">Documents</p>
@@ -90,7 +106,7 @@ export default function HostRequest() {
               {user.documents.map((doc, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="w-14 h-14 rounded-full bg-[#FF8973] flex items-center justify-center mb-1">
-                   <img src="/pdf.png" alt="" className="p-3" />
+                    <img src="/pdf.png" alt="" className="p-3" />
                   </div>
                   <span className="text-xs text-gray-600">{doc.name}</span>
                 </div>
@@ -98,10 +114,13 @@ export default function HostRequest() {
             </div>
 
             <div className="flex gap-2 w-full">
-              <button className="flex-1 bg-[#E94A35] rounded-full text-white py-2  text-sm font-medium hover:bg-[#D43A25] transition-colors">
+              <button onClick={handleApproved} className="flex-1 bg-[#E94A35] rounded-full text-white py-2  text-sm font-medium hover:bg-[#D43A25] transition-colors">
                 Approved
               </button>
-              <button className="flex-1 border border-[#E94A35] text-gray-700 py-2 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">
+              <button
+                onClick={handleDelete}
+                className="flex-1 border border-[#E94A35] text-gray-700 py-2 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors"
+              >
                 Delete
               </button>
             </div>
@@ -133,5 +152,5 @@ export default function HostRequest() {
         </button>
       </div>
     </div>
-  )
+  );
 }
