@@ -11,7 +11,7 @@ const Setting = () => {
       <h3 className="text-2xl text-black mb-4 pl-5 border-b border-lightGray pb-3">Settings</h3>
       <div>
         {routeLinkGenerators(dashboardItems)
-          .filter(({ children }) => children && children.length > 0) // Ensure only items with children are processed
+          .filter(({ children }) => children && children.length > 0) 
           .map(({  children }, indx) => (
             <div key={indx} className="space-y-4 container mx-auto max-w-7xl pt-4 pb-32">
               {children.map(({ subName, subPath,  }, inx) => (

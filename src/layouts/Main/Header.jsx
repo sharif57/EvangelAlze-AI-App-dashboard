@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Badge } from "antd";
 import profileImage from "../../assets/images/dash-profile.png";
 import { TbBellRinging } from "react-icons/tb";
@@ -59,11 +59,12 @@ const Header = () => {
             />
           </Badge>
         </div>
-        <div className="flex items-center">
+        <Link to={'/settings/profile'} className="flex items-center  gap-2" >
           <div>
             <img src={profileImage} alt="" className="rounded-full h-[42px] w-[42px]" />
           </div>
-          <Select
+            <p>Jane Cooper</p>
+          {/* <Select
             defaultValue="Jane Cooper"
             style={{
               width: 120,
@@ -81,8 +82,8 @@ const Header = () => {
                 label: 'Lucy',
               }
             ]}
-          />
-        </div>
+          /> */}
+        </Link>
       </div>
     </div>
   );
