@@ -17,15 +17,11 @@ import ForgotPassword from "../pages/Main/Setting/Change-password/ForgotPassword
 import VerifyEmail from "../pages/Main/Setting/Change-password/VerifyEmail";
 import Trust from "../pages/Settings/Trust";
 import EditTrust from "../pages/Settings/EditTrust";
-import { TbCash, TbUserQuestion } from "react-icons/tb";
+import {  TbUserQuestion } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
-import { BadgePoundSterling, ShoppingBag } from "lucide-react";
-import Shop from "../pages/Main/Shop/Shop";
-import AddItem from "../pages/Main/Shop/AddItem";
-import Parties from "../pages/Main/Parties/Parties";
-import TransactionHome from "../pages/Main/Transaction/TransactionHome";
+
+import DashboardHomeTable from "../Components/DashboardHomeTable";
 import Notifications from "../pages/Main/Notifications/Notifications";
-import HostRequest from "../pages/Main/HostRequest/HostRequest";
 
 export const dashboardItems = [
   {
@@ -35,38 +31,38 @@ export const dashboardItems = [
     element: <DashboardHome />,
   },
   {
-    name: "Host Request",
-    path: "/host-request",
+    name: "Users",
+    path: "/users",
     icon: TbUserQuestion     ,
-    element: <HostRequest />,
+    element: <DashboardHomeTable />,
   },
-  {
-    name: "Shop",
-    path: "shop",
-    icon: ShoppingBag,
-    element: <Shop />,
-  },
-  {
-    path: "add-item",
-    element: <AddItem />,
-  },
-
-  {
-    name: "Parties",
-    path: "parties",
-    icon: TbCash,
-    element: <Parties />,
-  },
-  {
-    name: "Transaction",
-    path: "transaction",
-    icon: BadgePoundSterling,
-    element: <TransactionHome />,
-  },
+  // {
+  //   name: "Shop",
+  //   path: "shop",
+  //   icon: ShoppingBag,
+  //   element: <Shop />,
+  // },
   {
     path: "notifications",
     element: <Notifications />,
   },
+
+  // {
+  //   name: "Parties",
+  //   path: "parties",
+  //   icon: TbCash,
+  //   element: <Parties />,
+  // },
+  // {
+  //   name: "Transaction",
+  //   path: "transaction",
+  //   icon: BadgePoundSterling,
+  //   element: <TransactionHome />,
+  // },
+  // {
+  //   path: "notifications",
+  //   element: <Notifications />,
+  // },
 
   {
     name: "Setting",

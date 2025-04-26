@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
 
-    <div className="w-full h-[88px] flex justify-between items-center rounded-lg py-[16px] px-[32px] shadow-lg bg-white border border-[#E73E1E]">
+    <div className="w-full h-[88px] flex justify-between items-center text-white rounded-lg py-[16px] px-[32px] shadow-lg bg-[#004E64] ">
       <div className="text-start space-y-0.5">
         <p className="text-sm md:text-xl font-light">
           {"Welcome, Jane Cooper"}
@@ -55,7 +55,7 @@ const Header = () => {
           <Badge style={{ backgroundColor: "#000000", width: '20px', height: '20px', objectFit: 'contain' }} count={1}>
             <TbBellRinging
               style={{ cursor: "pointer" }}
-              className={` w-6 h-6 rounded-full shadow-sm  font-bold transition-all`}
+              className={` w-6 h-6 text-white rounded-full shadow-sm  font-bold transition-all`}
             />
           </Badge>
         </div>

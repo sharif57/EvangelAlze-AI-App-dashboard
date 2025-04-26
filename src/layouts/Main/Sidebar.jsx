@@ -34,7 +34,7 @@ const Sidebar = () => {
     // console.log(location.pathname.includes("earnings"));
   }, [location.pathname]);
   return (
-    <div className="fixed top-0 left-0 w-[290px] min-h-screen h-full pr-0 bg-[#FFFFFF]">
+    <div className="fixed top-0 left-0 w-[290px] min-h-screen h-full pr-0 bg-[#E8EDEE]">
       <div className="h-full flex flex-col justify-between  pt-[50px] border drop-shadow">
         <div className="space-y[24px">
           <div className="">
@@ -58,9 +58,9 @@ const Sidebar = () => {
                         to={path}
                         className={({ isActive }) =>
                           isActive
-                            ? "bg-[#E73E1E] text-white" +
+                            ? "bg-[#004E64] text-white" +
                             " w-full px-4 py-3 flex items-center justify-start gap-3 text-md transition-all rounded-full"
-                            : " hover:text-white  hover:bg-[#e6715a]" +
+                            : " hover:text-white  hover:bg-[#004E64]" +
                             " w-full px-4 py-3 flex items-center justify-start gap-3 text-md transition-all rounded-full"
                         }
                       >
