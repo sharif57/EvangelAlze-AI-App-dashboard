@@ -17,7 +17,7 @@ import ForgotPassword from "../pages/Main/Setting/Change-password/ForgotPassword
 import VerifyEmail from "../pages/Main/Setting/Change-password/VerifyEmail";
 import Trust from "../pages/Settings/Trust";
 import EditTrust from "../pages/Settings/EditTrust";
-import {  TbUserQuestion } from "react-icons/tb";
+import { TbUserQuestion } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 
 import DashboardHomeTable from "../Components/DashboardHomeTable";
@@ -33,36 +33,14 @@ export const dashboardItems = [
   {
     name: "Users",
     path: "/users",
-    icon: TbUserQuestion     ,
+    icon: TbUserQuestion,
     element: <DashboardHomeTable />,
   },
-  // {
-  //   name: "Shop",
-  //   path: "shop",
-  //   icon: ShoppingBag,
-  //   element: <Shop />,
-  // },
+
   {
     path: "notifications",
     element: <Notifications />,
   },
-
-  // {
-  //   name: "Parties",
-  //   path: "parties",
-  //   icon: TbCash,
-  //   element: <Parties />,
-  // },
-  // {
-  //   name: "Transaction",
-  //   path: "transaction",
-  //   icon: BadgePoundSterling,
-  //   element: <TransactionHome />,
-  // },
-  // {
-  //   path: "notifications",
-  //   element: <Notifications />,
-  // },
 
   {
     name: "Setting",
