@@ -65,14 +65,6 @@ const DashboardHomeTable = () => {
     <div className="rounded-lg border py-4 bg-white mt-8 recent-users-table">
       <div className="flex items-center justify-between p-2">
         <h3 className="text-2xl text-black mb-4 pl-2">Recent Users</h3>
-        {/* <div className="flex justify-center items-center gap-4">
-          <input
-            type="text"
-            placeholder="User Name"
-            className="border border-[#999999] bg-[#fdece9] px-4 rounded-lg py-2"
-          />
-          <Search className="bg-[#E73E1E] text-white p-2 size-10 rounded-full"/> 
-        </div> */}
       </div>
       {/* Ant Design Table */}
       <Table

@@ -1,18 +1,12 @@
-import React, { useState } from "react";
 import { Button, Form, Input } from "antd";
 import dashProfile from "../../assets/images/dashboard-profile.png";
-// import "react-phone-number-input/style.css";
-// import PhoneInput from "react-phone-number-input";
-import { FiEdit } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+
 import PhoneCountryInput from "../../Components/PhoneCountryInput";
-import PageHeading from "../../Components/PageHeading";
-import { PiCameraPlus } from "react-icons/pi";
+
 import { FaAngleLeft } from "react-icons/fa6";
 
 const EditMyProfile = () => {
-  const [code, setCode] = useState();
-  const navigate = useNavigate();
+
   const onFinish = (values) => {
     console.log("Success:", values);
   };
