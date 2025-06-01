@@ -9,20 +9,25 @@ import VerifyEmail from "../pages/Auth/VerifyEmail";
 import ResetPassword from "../pages/Auth/ResetPassword";
 import ChatPage from "../pages/Main/Support/ChatPage";
 import ChangePassword from "../pages/Main/Setting/Change-password/ChangePassword";
+import AdminRoute from "../constants/AdminRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: (
+      <AdminRoute>
+        <Main />{" "}
+      </AdminRoute>
+    ),
     children: routesGenerators(dashboardItems),
   },
   {
     path: "/support-chat",
-    element: <ChatPage />
+    element: <ChatPage />,
   },
   {
     path: "/change-password",
-    element: <ChangePassword />
+    element: <ChangePassword />,
   },
   {
     path: "/auth",
@@ -52,7 +57,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-      // element: <NotFound />,
+    // element: <NotFound />,
   },
 ]);
 

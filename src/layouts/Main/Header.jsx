@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Badge } from "antd";
 import profileImage from "../../assets/images/dash-profile.png";
 import { TbBellRinging } from "react-icons/tb";
+import { useUserProfileQuery } from "../../redux/features/userSlice";
 
 
 const Header = () => {
@@ -12,10 +13,9 @@ const Header = () => {
   const [notificationPopup, setNotificationPopup] = useState(false);
   console.log(notificationPopup)
 
-  const handleChange = (value) => {
-    console.log(`selected ${value}`);
-  };
-  
+   const { data } = useUserProfileQuery();
+   const apiUrl = import.meta.env.VITE_IMAGE_API || "";
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -42,7 +42,7 @@ const Header = () => {
     <div className="w-full h-[88px] flex justify-between items-center text-white rounded-lg py-[16px] px-[32px] shadow-lg bg-[#004E64] ">
       <div className="text-start space-y-0.5">
         <p className="text-sm md:text-xl font-light">
-          {"Welcome, Jane Cooper"}
+          {`Welcome, ${data?.data?.name}`}
         </p>
         <p className="text-sm md:text-xl">{"Have a nice day!"}</p>
       </div>
@@ -60,28 +60,10 @@ const Header = () => {
         </div>
         <Link to={'/settings/profile'} className="flex items-center  gap-2" >
           <div>
-            <img src={profileImage} alt="" className="rounded-full h-[42px] w-[42px]" />
+            <img src={apiUrl + data?.data?.image} alt="" className="rounded-full h-[42px] w-[42px]" />
           </div>
-            <p>Jane Cooper</p>
-          {/* <Select
-            defaultValue="Jane Cooper"
-            style={{
-              width: 120,
-            }}
-            bordered={false}
-            suffixIcon={<MdOutlineKeyboardArrowDown color="black" fontSize={20} />}
-            onChange={handleChange}
-            options={[
-              {
-                value: 'Jane Cooper',
-                label: 'Jane Cooper',
-              },
-              {
-                value: 'lucy',
-                label: 'Lucy',
-              }
-            ]}
-          /> */}
+            <p>{data?.data?.name}</p>
+       
         </Link>
       </div>
     </div>

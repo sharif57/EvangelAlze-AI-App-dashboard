@@ -2,6 +2,24 @@ import baseApi from "../api/baseApi";
 
 export const userApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
+
+    userProfile: builder.query({
+      query: () => ({
+        url: "/user/profile",
+        method: "GET",
+      }),
+      providesTags: ["User"],
+    }),
+
+    userProfileUpdate: builder.mutation({
+      query: (data) => ({
+        url: "/user/update-profile",
+        method: "PATCH",
+        body: data,
+      }),
+      invalidatesTags: ["User"],
+    }),
+
     getTotalUsers: builder.query({
       query: () => ({
         url: "/dashboard/get-statistics",
@@ -20,4 +38,4 @@ export const userApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetTotalUsersQuery, useAllUserDataQuery } = userApi;
+export const { useGetTotalUsersQuery, useAllUserDataQuery , useUserProfileQuery , useUserProfileUpdateMutation} = userApi;
