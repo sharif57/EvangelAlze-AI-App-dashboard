@@ -20,6 +20,23 @@ export const userApi = baseApi.injectEndpoints({
       invalidatesTags: ["User"],
     }),
 
+    privacyGet: builder.query({
+      query: () => ({
+        url: "/setting/get/about",
+        method: "GET",
+      }),
+      providesTags: ["User"],
+    }),
+
+    postPrivacyUpdate: builder.mutation({
+      query: (data) => ({
+        url: "/setting/create",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["User"],
+    }),
+
     getTotalUsers: builder.query({
       query: () => ({
         url: "/dashboard/get-statistics",
@@ -38,4 +55,4 @@ export const userApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetTotalUsersQuery, useAllUserDataQuery , useUserProfileQuery , useUserProfileUpdateMutation} = userApi;
+export const { useGetTotalUsersQuery, useAllUserDataQuery , useUserProfileQuery , useUserProfileUpdateMutation, usePrivacyGetQuery, usePostPrivacyUpdateMutation} = userApi;
